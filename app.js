@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const path = require('path');
+require('./db/connect.js');
 const routes = require('./routes');
 require('colors');
 const { notFound, errorHandler } = require('./middleware/errorHandler');

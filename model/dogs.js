@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose');
+const { Dog } = require('./schemas');
 
-const dog = new Schema({ name: String, born: Date });
-const Dog = model('dog', dog);
-module.exports = { Dog };
+const getDogs = () => Dog.find();
+
+module.exports = { getDogs };
